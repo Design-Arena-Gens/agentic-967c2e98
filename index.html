@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanter Primary School - Logo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .logo {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #764ba2;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .sparkle {
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .magic-wand {
+            animation: wand-wave 3s ease-in-out infinite;
+            transform-origin: 80% 80%;
+        }
+
+        @keyframes wand-wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+
+        .star-burst {
+            animation: burst 2s ease-in-out infinite;
+        }
+
+        @keyframes burst {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            .subtitle { font-size: 18px; }
+            .logo { width: 220px; height: 220px; }
+            .container { padding: 40px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <svg class="logo" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular background with gradient -->
+                <defs>
+                    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                    </linearGradient>
+                    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ffed4e;stop-opacity:1" />
+                    </linearGradient>
+                    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+
+                <!-- Outer circle -->
+                <circle cx="150" cy="150" r="145" fill="url(#bgGradient)" stroke="#fff" stroke-width="3"/>
+
+                <!-- Inner glow circle -->
+                <circle cx="150" cy="150" r="130" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+
+                <!-- Open book -->
+                <g transform="translate(150, 155)">
+                    <!-- Left page -->
+                    <path d="M -45,-30 L -45,40 Q -45,50 -55,50 L -75,50 Q -85,50 -85,40 L -85,-30 Q -85,-35 -80,-37 Q -70,-40 -60,-40 Q -50,-40 -45,-37 Q -45,-35 -45,-30 Z"
+                          fill="url(#bookGradient)" stroke="#d4af37" stroke-width="2"/>
+
+                    <!-- Right page -->
+                    <path d="M 45,-30 L 45,40 Q 45,50 55,50 L 75,50 Q 85,50 85,40 L 85,-30 Q 85,-35 80,-37 Q 70,-40 60,-40 Q 50,-40 45,-37 Q 45,-35 45,-30 Z"
+                          fill="url(#bookGradient)" stroke="#d4af37" stroke-width="2"/>
+
+                    <!-- Book spine shadow -->
+                    <rect x="-2" y="-35" width="4" height="85" fill="#c9a834" opacity="0.6"/>
+
+                    <!-- Page lines (left) -->
+                    <line x1="-75" y1="-15" x2="-50" y2="-15" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+                    <line x1="-75" y1="-5" x2="-50" y2="-5" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+                    <line x1="-75" y1="5" x2="-50" y2="5" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+
+                    <!-- Page lines (right) -->
+                    <line x1="50" y1="-15" x2="75" y2="-15" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+                    <line x1="50" y1="-5" x2="75" y2="-5" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+                    <line x1="50" y1="5" x2="75" y2="5" stroke="#d4af37" stroke-width="1.5" opacity="0.5"/>
+                </g>
+
+                <!-- Magic wand -->
+                <g class="magic-wand" transform="translate(210, 95)">
+                    <line x1="0" y1="0" x2="30" y2="-30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="0" y1="0" x2="30" y2="-30" stroke="#764ba2" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="30" cy="-30" r="8" fill="#ffd700" stroke="#fff" stroke-width="2"/>
+                    <circle cx="30" cy="-30" r="4" fill="#fff" opacity="0.8"/>
+                </g>
+
+                <!-- Sparkles -->
+                <g class="sparkle">
+                    <circle cx="220" cy="110" r="3" fill="#ffd700"/>
+                    <circle cx="235" cy="95" r="2" fill="#fff"/>
+                    <circle cx="200" cy="90" r="2.5" fill="#ffd700"/>
+                </g>
+
+                <!-- Stars around the logo -->
+                <g class="star-burst">
+                    <polygon points="150,25 153,35 163,35 155,42 158,52 150,45 142,52 145,42 137,35 147,35"
+                             fill="#ffd700" stroke="#fff" stroke-width="1"/>
+                </g>
+
+                <g class="sparkle">
+                    <polygon points="75,80 77,85 82,85 78,89 80,94 75,90 70,94 72,89 68,85 73,85"
+                             fill="#fff" opacity="0.9"/>
+                    <polygon points="225,80 227,85 232,85 228,89 230,94 225,90 220,94 222,89 218,85 223,85"
+                             fill="#fff" opacity="0.9"/>
+                </g>
+
+                <!-- Letter E with magical flourish -->
+                <text x="150" y="120" font-family="Georgia, serif" font-size="60" font-weight="bold"
+                      fill="#fff" text-anchor="middle" opacity="0.3">E</text>
+            </svg>
+        </div>
+
+        <h1>Enchanter</h1>
+        <p class="subtitle">Primary School</p>
+        <p class="tagline">Where Learning Becomes Magical ✨</p>
+    </div>
+</body>
+</html>
